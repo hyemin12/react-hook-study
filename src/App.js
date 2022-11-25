@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
+import Timer from "./timer/Timer";
 import AppCallback from "./useCallback/AppCallback";
 import AppMemo from "./useMemo/AppMemo";
 
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/usememo" element={<AppMemo />} />
           <Route path="/usecallback" element={<AppCallback />} />
+          <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>
     </div>
