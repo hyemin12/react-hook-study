@@ -27,39 +27,36 @@ function Timer() {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  let totalTime = parseInt(minutes * 60 + seconds);
-
-  console.log(typeof totalTime, totalTime / 60);
-
-  const [countMin, setCountMin] = useState(Math.floor(totalTime / 60));
-  const [countSec, setCountSec] = useState(Math.floor(totalTime % 60));
+  const [countMin, setCountMin] = useState(Math.floor(minutes / 60));
+  const [countSec, setCountSec] = useState(Math.floor(seconds / 60));
 
   const onChange = (e) => {
     const { value, id } = e.target;
-    if (id === "minutes") {
+
+    if (id === "minutes" && value >= 0) {
       setMinutes(value);
-    } else if (id === "seconds") {
-      if (parseInt(value) > 59) {
-        // const min = parseInt(value / 60);
-        // console.log(value, min);
-        // setMinutes(minutes + min);
-      }
+    } else if (id === "seconds" && value >= 0) {
       setSeconds(value);
-      setCountSec(value);
     }
   };
-  const convertFormat = (num) => {
-    String(num).padStart(2, "0");
-  };
+  /** 카운트 시작하기 */
   const countStart = () => {
-    if (timerRef.current !== null) {
-      return;
+    let totalTime = minutes * 60 + seconds;
+    // if (timerRef.current !== null) {
+    //   return;
+    // }
+    if (totalTime === 0) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
     }
     timerRef.current = setInterval(() => {
-      setMinutes(convertFormat(parseInt(totalTime / 60)));
-      setSeconds(convertFormat(parseInt(totalTime % 60)));
+      console.log(totalTime, countMin, countSec);
+      totalTime -= 1;
+      setCountMin(Math.floor(totalTime / 60));
+      setCountSec(Math.floor(totalTime % 60));
     }, 1000);
   };
+  /** 카운트 멈추기 */
   const countStop = () => {
     if (timerRef.current === null) {
       return;
@@ -67,7 +64,6 @@ function Timer() {
     clearInterval(timerRef.current);
     timerRef.current = null;
   };
-  // console.log(minutes, seconds, countSec);
   return (
     <>
       <div>
@@ -76,16 +72,33 @@ function Timer() {
         <button onClick={handleCountStop}>멈춤</button>
       </div>
       <div style={{ padding: "50px 0" }}>
-        <label>분 : </label>
-        <input id="minutes" type="number" value={minutes} onChange={onChange} />
-        <label>초 : </label>
-        <input id="seconds" type="number" value={seconds} onChange={onChange} />
-        <h4>
+        <input
+          id="minutes"
+          type="number"
+          value={minutes}
+          onChange={onChange}
+          onKeyUp={onChange}
+          style={{ width: "40px" }}
+        />
+        <label style={{ padding: "0 10px" }}>분 </label>
+        <input
+          id="seconds"
+          type="number"
+          value={seconds}
+          onChange={onChange}
+          onKeyUp={onChange}
+          style={{ width: "40px" }}
+        />
+        <label style={{ padding: "0 10px" }}>초 </label>
+
+        <button onClick={countStart} style={{ marginRight: "4px" }}>
+          시작
+        </button>
+        <button onClick={countStop}>멈춤</button>
+        <h4 ref={timerRef}>
           {String(countMin).padStart(2, "0")}:
           {String(countSec).padStart(2, "0")}
         </h4>
-        <button onClick={countStart}>시작</button>
-        <button onClick={countStop}>멈춤</button>
       </div>
     </>
   );
