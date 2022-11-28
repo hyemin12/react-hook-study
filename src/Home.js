@@ -14,6 +14,7 @@ function Home() {
         <Link to="/useClick">useClick()</Link>
         <Link to="/useConfirm">useConfirm()</Link>
         <Link to="/usePreventLeave">usePreventLeave()</Link>
+        <Link to="/useBeforeLeave">useBeforeLeave()</Link>
         <Link to="/timer">timer</Link>
       </div>
     </div>

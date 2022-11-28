@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
 import Timer from "./timer/Timer";
+import AppUseBeforeLeave from "./useBeforeLeave/UseBeforeLeave";
 import AppCallback from "./useCallback/AppCallback";
 import AppUseClick from "./useClick/UseClick";
 import AppUseConfirm from "./useConfirm/UseConfirm";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/useClick" element={<AppUseClick />} />
           <Route path="/useConfirm" element={<AppUseConfirm />} />
           <Route path="/usePreventLeave" element={<AppUsePreventLeave />} />
+          <Route path="/useBeforeLeave" element={<AppUseBeforeLeave />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>
