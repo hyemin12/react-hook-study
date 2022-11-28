@@ -1,19 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
-import Timer from "./timer/Timer";
 import AppUseBeforeLeave from "./useBeforeLeave/UseBeforeLeave";
 import AppCallback from "./useCallback/AppCallback";
 import AppUseClick from "./useClick/UseClick";
 import AppUseConfirm from "./useConfirm/UseConfirm";
 import AppUseEffect from "./UseEffect";
 import AppUseFadeIn from "./useFadeIn/UseFadeIn";
+import AppUseFullScreen from "./useFullScreen/UseFullScreen";
 import AppUseInput from "./useInput/UseInput";
 import AppMemo from "./useMemo/AppMemo";
 import AppUseNetwork from "./useNetwork/UseNetwork";
 import AppUsePreventLeave from "./usePreventLeave/usePreventLeave";
+import AppUseScroll from "./useScroll/UseScroll";
 import AppUseTabs from "./useTabs/UseTabs";
 import AppUseTitle from "./useTitle/UseTitle";
+import Timer from "./timer/Timer";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
           <Route path="/useBeforeLeave" element={<AppUseBeforeLeave />} />
           <Route path="/useFadeIn" element={<AppUseFadeIn />} />
           <Route path="/useNetwork" element={<AppUseNetwork />} />
+          <Route path="/useScroll" element={<AppUseScroll />} />
+          <Route path="/useFullScreen" element={<AppUseFullScreen />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>

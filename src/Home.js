@@ -17,6 +17,8 @@ function Home() {
         <Link to="/useBeforeLeave">useBeforeLeave()</Link>
         <Link to="/useFadeIn">useFadeIn()</Link>
         <Link to="/useNetwork">useNetwork()</Link>
+        <Link to="/useScroll">useScroll()</Link>
+        <Link to="/useFullScreen">useFullScreen()</Link>
         <Link to="/timer">timer</Link>
       </div>
     </div>
