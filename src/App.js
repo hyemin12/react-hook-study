@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./Home";
 import Timer from "./timer/Timer";
 import AppCallback from "./useCallback/AppCallback";
+import AppUseClick from "./useClick/UseClick";
 import AppUseEffect from "./UseEffect";
 import AppUseInput from "./useInput/UseInput";
 import AppMemo from "./useMemo/AppMemo";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/useTabs" element={<AppUseTabs />} />
           <Route path="/useEffect" element={<AppUseEffect />} />
           <Route path="/useTitle" element={<AppUseTitle />} />
+          <Route path="/useClick" element={<AppUseClick />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>

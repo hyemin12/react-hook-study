@@ -11,6 +11,7 @@ function Home() {
         <Link to="/useTabs">useTabs()</Link>
         <Link to="/useEffect">useEffect()</Link>
         <Link to="/useTitle">useTitle()</Link>
+        <Link to="/useClick">useClick()</Link>
         <Link to="/timer">timer</Link>
       </div>
     </div>
