@@ -7,6 +7,8 @@ function Home() {
       <div className="links">
         <Link to="/usememo">useMemo()</Link>
         <Link to="/usecallback">useCallback()</Link>
+        <Link to="/useInput">useInput()</Link>
+        <Link to="/useTabs">useTabs()</Link>
         <Link to="/timer">timer</Link>
       </div>
     </div>
