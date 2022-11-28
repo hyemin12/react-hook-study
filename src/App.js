@@ -7,6 +7,7 @@ import AppCallback from "./useCallback/AppCallback";
 import AppUseClick from "./useClick/UseClick";
 import AppUseConfirm from "./useConfirm/UseConfirm";
 import AppUseEffect from "./UseEffect";
+import AppUseFadeIn from "./useFadeIn/UseFadeIn";
 import AppUseInput from "./useInput/UseInput";
 import AppMemo from "./useMemo/AppMemo";
 import AppUsePreventLeave from "./usePreventLeave/usePreventLeave";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/useConfirm" element={<AppUseConfirm />} />
           <Route path="/usePreventLeave" element={<AppUsePreventLeave />} />
           <Route path="/useBeforeLeave" element={<AppUseBeforeLeave />} />
+          <Route path="/useFadeIn" element={<AppUseFadeIn />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>
