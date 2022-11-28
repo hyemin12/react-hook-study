@@ -10,6 +10,7 @@ import AppUseEffect from "./UseEffect";
 import AppUseFadeIn from "./useFadeIn/UseFadeIn";
 import AppUseInput from "./useInput/UseInput";
 import AppMemo from "./useMemo/AppMemo";
+import AppUseNetwork from "./useNetwork/UseNetwork";
 import AppUsePreventLeave from "./usePreventLeave/usePreventLeave";
 import AppUseTabs from "./useTabs/UseTabs";
 import AppUseTitle from "./useTitle/UseTitle";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/usePreventLeave" element={<AppUsePreventLeave />} />
           <Route path="/useBeforeLeave" element={<AppUseBeforeLeave />} />
           <Route path="/useFadeIn" element={<AppUseFadeIn />} />
+          <Route path="/useNetwork" element={<AppUseNetwork />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>
