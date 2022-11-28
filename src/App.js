@@ -16,6 +16,7 @@ import AppUseScroll from "./useScroll/UseScroll";
 import AppUseTabs from "./useTabs/UseTabs";
 import AppUseTitle from "./useTitle/UseTitle";
 import Timer from "./timer/Timer";
+import AppUseNotification from "./useNotification/UseNotification";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/useNetwork" element={<AppUseNetwork />} />
           <Route path="/useScroll" element={<AppUseScroll />} />
           <Route path="/useFullScreen" element={<AppUseFullScreen />} />
+          <Route path="/useNotification" element={<AppUseNotification />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>
