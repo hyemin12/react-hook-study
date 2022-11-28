@@ -5,6 +5,7 @@ import Timer from "./timer/Timer";
 import AppCallback from "./useCallback/AppCallback";
 import AppUseInput from "./useInput/UseInput";
 import AppMemo from "./useMemo/AppMemo";
+import AppUseTabs from "./useTabs/UseTabs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/usememo" element={<AppMemo />} />
           <Route path="/usecallback" element={<AppCallback />} />
           <Route path="/useInput" element={<AppUseInput />} />
+          <Route path="/useTabs" element={<AppUseTabs />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>
