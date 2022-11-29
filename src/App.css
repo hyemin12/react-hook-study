@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 .links {
   display: flex;
@@ -11,11 +12,13 @@
 }
 .links a {
   display: inline-block;
-  background-color: #eee;
-  border-radius: 25px;
+  border: 1px solid #ccc;
+  /* background-color: #eee; */
+  border-radius: 10px;
   padding: 10px 25px;
   color: #333;
-  font-size: 1.3em;
+  font-size: 1.1em;
+  text-decoration: none;
 }
 
 section {

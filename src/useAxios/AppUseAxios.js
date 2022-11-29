@@ -1,4 +1,4 @@
-import useAxios from "./UseAxios";
+import useAxios from "./useAxios";
 
 const AppUseAxios = () => {
   const { loading, error, data, refetch } = useAxios({

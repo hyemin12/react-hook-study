@@ -7,6 +7,7 @@ const useAxios = (options, axiosInstance = defaultAxios) => {
     error: null,
     data: null,
   });
+  /** refetch 했을 때 */
   const [trigger, setTrigger] = useState(0);
 
   const refetch = () => {
@@ -16,6 +17,7 @@ const useAxios = (options, axiosInstance = defaultAxios) => {
     });
     setTrigger(Date.now());
   };
+  /* */
   useEffect(() => {
     if (!options.url) {
       return;

@@ -17,7 +17,9 @@ import AppUseTabs from "./useTabs/UseTabs";
 import AppUseTitle from "./useTitle/UseTitle";
 import Timer from "./timer/Timer";
 import AppUseNotification from "./useNotification/UseNotification";
-import AppUseAxios from "./useAxios/UseAxios";
+
+import AppUseLocalStorage from "./useLocalStorage/useLocalStorage";
+import AppUseAxios from "./useAxios/AppUseAxios";
 
 function App() {
   return (
@@ -41,6 +43,7 @@ function App() {
           <Route path="/useFullScreen" element={<AppUseFullScreen />} />
           <Route path="/useNotification" element={<AppUseNotification />} />
           <Route path="/useAxios" element={<AppUseAxios />} />
+          <Route path="/useLocalStorage" element={<AppUseLocalStorage />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>
