@@ -17,6 +17,7 @@ import AppUseTabs from "./useTabs/UseTabs";
 import AppUseTitle from "./useTitle/UseTitle";
 import Timer from "./timer/Timer";
 import AppUseNotification from "./useNotification/UseNotification";
+import AppUseAxios from "./useAxios/UseAxios";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/useScroll" element={<AppUseScroll />} />
           <Route path="/useFullScreen" element={<AppUseFullScreen />} />
           <Route path="/useNotification" element={<AppUseNotification />} />
+          <Route path="/useAxios" element={<AppUseAxios />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>

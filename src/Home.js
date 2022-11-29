@@ -20,6 +20,7 @@ function Home() {
         <Link to="/useScroll">useScroll()</Link>
         <Link to="/useFullScreen">useFullScreen()</Link>
         <Link to="/useNotification">useNotification()</Link>
+        <Link to="/useAxios">useAxios()</Link>
         <Link to="/timer">timer</Link>
       </div>
     </div>
