@@ -1,9 +1,13 @@
 import { useState, useReducer } from "react";
 
-const ACTION_TYPES = {};
+const ACTION_TYPES = {
+  addStudent: "add-student",
+  deleteStudent: "delete-student",
+  markedStudent: "marked-student",
+};
 const reducer = (state, action) => {
   switch (action.type) {
-    case "add-student":
+    case ACTION_TYPES.addStudent:
       const newStudent = {
         id: Date.now(),
         name: action.payload.name,
@@ -13,14 +17,14 @@ const reducer = (state, action) => {
         count: state.count + 1,
         students: [...state.students, newStudent],
       };
-    case "delete-student":
+    case ACTION_TYPES.deleteStudent:
       return {
         count: state.count - 1,
         students: state.students.filter(
           (student) => student.id !== action.payload.id
         ),
       };
-    case "marked-student":
+    case ACTION_TYPES.markedStudent:
       return {
         count: state.count,
         students: state.students.map((student) => {
@@ -56,7 +60,7 @@ const EgStudent = () => {
       />
       <button
         onClick={() => {
-          dispatch({ type: "add-student", payload: { name } });
+          dispatch({ type: ACTION_TYPES.addStudent, payload: { name } });
         }}
       >
         추가
@@ -75,14 +79,14 @@ const EgStudent = () => {
             </span>
             <button
               onClick={() =>
-                dispatch({ type: "marked-student", payload: { id } })
+                dispatch({ type: ACTION_TYPES.markedStudent, payload: { id } })
               }
             >
               출석
             </button>
             <button
               onClick={() => {
-                dispatch({ type: "delete-student", payload: { id } });
+                dispatch({ type: ACTION_TYPES.deleteStudent, payload: { id } });
               }}
             >
               삭제
