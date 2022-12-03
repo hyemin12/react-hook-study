@@ -20,6 +20,7 @@ import AppUseNotification from "./useNotification/UseNotification";
 
 import AppUseLocalStorage from "./useLocalStorage/useLocalStorage";
 import AppUseAxios from "./useAxios/AppUseAxios";
+import AppUseReducer from "./useReducer/useReducer";
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
           <Route path="/useNotification" element={<AppUseNotification />} />
           <Route path="/useAxios" element={<AppUseAxios />} />
           <Route path="/useLocalStorage" element={<AppUseLocalStorage />} />
+          <Route path="/useReducer" element={<AppUseReducer />} />
+
           <Route path="/timer" element={<Timer />} />
         </Routes>
       </BrowserRouter>

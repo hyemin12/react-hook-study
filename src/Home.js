@@ -21,6 +21,7 @@ function Home() {
     "useAxios",
     "useLocalStorage",
     "timer",
+    "useReducer",
   ];
   return (
     <div className="container">
