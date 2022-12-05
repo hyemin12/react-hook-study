@@ -22,6 +22,7 @@ function Home() {
     "useLocalStorage",
     "timer",
     "useReducer",
+    "useRef",
   ];
   return (
     <div className="container">
